@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="dist/output.css">
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        };
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 ">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#home" class="block py-6">
+                        <img src="dist/img/profile.png" alt="pp" class="rounded-full" width="50">
+                    </a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+
+                    <!-- nav -->
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 lg:dark:bg-transparent dark:bg-dark dark:shadow-slate-600 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#"
+                                    class="text-2xl text-dark py-2 mx-8 flex group-hover:text-succes dark:text-white">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#project"
+                                    class="text-2xl text-dark py-2 mx-8 flex group-hover:text-succes dark:text-white">Project
+
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#about"
+                                    class="text-2xl text-dark py-2 mx-8 flex group-hover:text-succes dark:text-white">About
+                                    Me</a>
+                            </li>
+
+                            <li class="group">
+                                <a href="#contact"
+                                    class="text-2xl text-dark py-2 mx-8 flex group-hover:text-succes dark:text-white">Contact</a>
+                            </li>
+                            <li class="flex-items-center pl-8 mt-3">
+                                <div class="flex">
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle">
+                                        <div
+                                            class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div
+                                                class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- close header -->
+    <!-- hero section start -->
+    <section id="home" class="pt-12 dark:bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full self-center mt-10 px-4 lg:w-1/2">
+                    <h1 class="text-base font-semibold text-succes md:text-xl mt-10 hi">Halo, saya <span
+                            class="block font-bold text-dark dark:text-white text-4xl mt-1 lg:text-5xl">MUHAMMAD DARIAZ
+                            ZIDANE</span>
+                    </h1>
+                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl mhs">
+                    </h2>
+
+                </div>
+                <div class="w-full self-end px-4 lg:w-1/2">
+                    <div class="relative lg:mt-24 lg:right-0">
+                        <img src="dist/img/profile.png" alt="dz" class="max-w-full mx-auto" width="350">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- about section start -->
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 lg:w-1/2 mt-5" data-aos="fade-right" data-aos-duration="500">
+                    <h4 class="font-semibold  text-succes text-2xl mb-3">About Me</h4>
+
+                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Saya adalah seorang mahasiswa
+                        semester 2 disebuah kampus swasta tepatnya kampus universitas bina sarana informatika cabang
+                        karawang jawa barat</p>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 mt-5 lg:pl-32" data-aos="fade-left" data-aos-delay="500"
+                    data-aos-duration="500">
+                    <h3 class="font-semibold text-dark text-2xl mb-3 lg:text-2xl dark:text-white">Social Media</h3>
+                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Berikut sosial media yang saya
+                        gunakan</p>
+                    <div class="flex items-center">
+                        <!-- yt -->
+                        <a href="https://www.youtube.com/channel/UCfGvkDZqPeUCgoP_OCsDelw" target="blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-succes hover:bg-succes hover:text-white"><svg
+                                role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>YouTube</title>
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg></a>
+                        <!-- ig -->
+                        <a href="https://instagram.com/dzm416" target="blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-succes hover:bg-succes hover:text-white"><svg
+                                role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Instagram</title>
+                                <path
+                                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                            </svg></a>
+                        <!-- fb -->
+                        <a href="https://web.facebook.com/M.dariaz.zidan" target="blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-succes hover:bg-succes hover:text-white"><svg
+                                role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Facebook</title>
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg></a>
+                        <!-- tt -->
+                        <a href="https://www.tiktok.com/@zidane2822" target="blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-succes hover:bg-succes hover:text-white"><svg
+                                role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>TikTok</title>
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- client start -->
+    <section id="experience" class="pt-10 pb-14 bg-warning dark:bg-slate-500">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="mx-auto text-clip mb-16">
+                    <h2 class="font-bold text-white text-3xl mb-4 sm:text-3xl lg:text-4xl text-center dark:text-dark">
+                        Experience</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg text-center dark:text-slate-300">Selama
+                        kuliah berikut adalah
+                        teknologi yang saya kuasai</p>
+                </div>
+            </div>
+
+            <div class="w-full px-4">
+                <div class="flex flex-wrap items-center justify-center">
+                    <a href="#"
+                        class="max-w-[170px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/IMG_20220519_112631-removebg-preview.png" alt="" data-aos="fade-right"
+                            data-aos-duration="1000">
+                    </a>
+                    <a href="#"
+                        class="max-w-[170px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/js.png" alt="" data-aos="fade-right" data-aos-duration="500">
+                    </a>
+                    <a href="#"
+                        class="max-w-[170px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/images-removebg-preview.png" alt="" data-aos="fade-up"
+                            data-aos-duration="500">
+                    </a>
+                    <a href="#"
+                        class="max-w-[170px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/css-removebg-preview.png" alt="" data-aos="fade-left"
+                            data-aos-duration="500">
+                    </a>
+                    <a href="#"
+                        class="max-w-[170px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/37547748d24650510f10eb2a5fd37164-removebg-preview.png" alt=""
+                            data-aos="fade-left" data-aos-duration="1000">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- client end -->
+
+    <!-- blog -->
+    <section id="project" class="pt-36 pb-32 bg-slate-100 dark:bg-slate-800">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-clip mb-16">
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl text-center dark:text-white">
+                        Newst Project</h2>
+
+                </div>
+            </div>
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-right" data-aos-duration="1000">
+                    <div
+                        class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700 dark:shadow-slate-500">
+                        <img src="dist/img/kotak1.png" alt="programming" class="w-full">
+                        <div class="py-8 px-6">
+                            <h3>
+                                <a href="#"
+                                    class="block mb-3 font-semibold text-xl text-dark hover:text-succes truncate dark:text-white dark:hover:text-succes">
+                                    Company Profile with bootstrap 5</a></h3>
+                            <p class="font-medium text-base text-secondary mb-6 dark:text-slate-400">Project company
+                                profile berbasis web
+                                dengan menggunakan bootstrap 5 </p>
+                            <a href="https://compayprofile.jodhykotambunan.repl.co/" target="blank"
+                                class="font-medium text-sm text-white bg-succes py-2 px-4 rounded-lg hover:opacity-80">
+                                Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700 dark:shadow-slate-500">
+                        <img src="dist/img/kotak2.png" alt="programming" class="w-75">
+                        <div class="py-8 px-6">
+                            <h3>
+                                <a href="#"
+                                    class="block mb-3 font-semibold text-xl text-dark hover:text-succes truncate dark:text-white dark:hover:text-succes">
+                                    E-commerce with JavaScript </a></h3>
+                            <p class="font-medium text-base text-secondary mb-6 dark:text-slate-400">Project E-commerce
+                                sederhana dengan JavaScript dan Bootstrap 5.1.3
+                            </p>
+                            <a href="https://zidaneshop.jodhykotambunan.repl.co/" target="blank"
+                                class="font-medium text-sm text-white bg-succes py-2 px-4 rounded-lg hover:opacity-80">
+                                Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-duration="1000">
+                    <div
+                        class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700 dark:shadow-slate-500">
+                        <img src="dist/img/kotak3.png" alt="programming" class="w-full ">
+                        <div class="py-8 px-6">
+                            <h3>
+                                <a href="#"
+                                    class="block mb-3 font-semibold text-xl text-dark hover:text-succes truncate dark:text-white dark:hover:text-succes">
+                                    E-commerce with Bootstrap 5.1.3</a></h3>
+                            <p class="font-medium text-base text-secondary mb-6 dark:text-slate-400">Project E-commerce
+                                kebutuhan sembako dengan Bootstrap 5.1 dan order via whatsapp
+                            </p>
+                            <a href="https://shop.jodhykotambunan.repl.co/" target="blank"
+                                class="font-medium text-sm text-white bg-succes py-2 px-4 rounded-lg hover:opacity-80">Baca
+                                selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blog end -->
+
+    <!-- contact -->
+    <section id="contact" class="pt-32 pb-12 dark:bg-slate-600">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-clip mb-16">
+                    <h4 class="font-semibold text-3xl text-succes mb-2 text-center dark:text-white">Contact me</h4>
+
+                </div>
+            </div>
+            <div class="w-full lg:w-2/3 lg:mx-auto">
+                <div class="w-full px-4">
+
+                    <div id="alert-1" class="my-alert hidden flex p-4 mb-4 bg-green-300 rounded-lg dark:bg-green-300"
+                        role="alert">
+                        <svg class="flex-shrink-0 w-5 h-5 text-blue-700 dark:text-blue-800" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M12,2C6.477,2,2,6.477,2,12c0,5.523,4.477,10,10,10s10-4.477,10-10C22,6.477,17.523,2,12,2z M10,17.414l-4.707-4.707 l1.414-1.414L10,14.586l7.293-7.293l1.414,1.414L10,17.414z">
+                            </path>
+                        </svg>
+                        <div class="ml-3 text-md font-semibold text-blue-700 dark:text-blue-800">
+                            Pesan berhasil terkirim
+                        </div>
+                        <button type="button"
+                            class="ml-auto -mx-1.5 -my-1.5 bg-transparent text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8 dark:bg-transparent dark:text-blue-600 dark:hover:bg-blue-300"
+                            data-dismiss-target="#alert-1" aria-label="Close">
+                            <span class="sr-only">Close</span>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <form name="zidane-contact-form">
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <div class="w-full px-4 mb-8">
+                        <label for="name" class="text-base text-succes font-bold dark:text-white">nama</label>
+                        <input type="text" id="name" name="nama"
+                            class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-succes focus:ring-1 focus:border-succes">
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="email" class="text-base text-succes font-bold dark:text-white">email</label>
+                        <input type="text" id="name" name="email"
+                            class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-succes focus:ring-1 focus:border-succes">
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="email" class="text-base text-succes font-bold dark:text-white">pesan</label>
+                        <textarea type="text" id="name" name="pesan"
+                            class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-succes focus:ring-1 focus:border-succes h-32"></textarea>
+                    </div>
+                    <div class="w-full px-4">
+                        <button type="submit"
+                            class="btn-kirim text-base font-semibold text-white bg-succes py-3 px-8 w-full rounded-full hover:opacity-80 hover:shadow-lg transition duration-500 mb-10">
+                            kirim
+                        </button>
+                        <button type="submit"
+                            class="hidden flex justify-center btn-loading text-base font-semibold text-white bg-succes py-3 px-8 w-full rounded-full hover:opacity-80 hover:shadow-lg transition duration-500 mb-10">
+                            <svg class="animate-spin" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25"
+                                height="25" viewBox="0 0 30 30" style=" fill:#000000;">
+                                <path
+                                    d="M 15 3 C 12.031398 3 9.3028202 4.0834384 7.2070312 5.875 A 1.0001 1.0001 0 1 0 8.5058594 7.3945312 C 10.25407 5.9000929 12.516602 5 15 5 C 20.19656 5 24.450989 8.9379267 24.951172 14 L 22 14 L 26 20 L 30 14 L 26.949219 14 C 26.437925 7.8516588 21.277839 3 15 3 z M 4 10 L 0 16 L 3.0507812 16 C 3.562075 22.148341 8.7221607 27 15 27 C 17.968602 27 20.69718 25.916562 22.792969 24.125 A 1.0001 1.0001 0 1 0 21.494141 22.605469 C 19.74593 24.099907 17.483398 25 15 25 C 9.80344 25 5.5490109 21.062074 5.0488281 16 L 8 16 L 4 10 z">
+                                </path>
+                            </svg>
+                        </button>
+
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- contact end -->
+
+    <!-- footer -->
+    <!-- <footer class="bg-warning pt-12">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-10 text-slate-300 lg:w-1/2">
+                    <h2 class="font-bold text-4xl text-white mb-5">M.Dariaz Zidane</h2>
+                    <h3 class="font-bold text-2xl mb-2">hubungi saya</h3>
+                    <p>jodhykotambunan.gmail.com</p>
+                    <p class="text-xl">jln. Pisangsambo Dusun Tamiang RT/RW 009/004 Desa Pisangsambo Kec. Tirtajaya</p>
+                    <p class="font-bold text-xl">Karawang</p>
+                </div>
+                <div class="w-full px-4 text-slate-300 lg:w-1/2">
+                    <h2 class="font-bold text-2xl text-white">Address</h2>
+
+
+
+
+
+                    <p class="text-xl">Jawa Barat</p>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    <!-- footer end -->
+
+
+    <footer class="text-center text-white bg-warning">
+        <div class="container pt-9">
+            <div class="flex justify-center mb-9">
+                <a href="https://web.facebook.com/M.dariaz.zidan" target="blank"
+                    class="mr-9 text-white hover:text-blue-700">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
+                        class="svg-inline--fa fa-facebook-f w-2.5" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/login" target="blank" class="mr-9 text-white hover:text-blue-400">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
+                        class="svg-inline--fa fa-twitter w-4" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&oq=goo&aqs=chrome.2.69i57j35i39j46i39i199i465j0i131i433i512l2j69i60l3.2503j0j4&sourceid=chrome&ie=UTF-8"
+                    target="blank" class="mr-9 text-white hover:text-yellow-500">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google"
+                        class="svg-inline--fa fa-google w-3.5" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 488 512">
+                        <path fill="currentColor"
+                            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/dzm416" target="blank" class="mr-9 text-white hover:text-rose-600">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
+                        class="svg-inline--fa fa-instagram w-3.5" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://id.linkedin.com/" target="blank" class="mr-9 text-white hover:text-cyan-600 ">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in"
+                        class="svg-inline--fa fa-linkedin-in w-3.5" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://github.com/muhammaddariazzidane" target="blank" class="text-white hover:text-succes">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
+                        class="svg-inline--fa fa-github w-4" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512">
+                        <path fill="currentColor"
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="text-center text-slate-300 p-4">
+            © 2022 Copyright:
+            <a class=" text-indigo-800" href="#">M dariaz zidane</a>
+        </div>
+    </footer>
+    <!-- back top -->
+    <a href="#home" class="hidden fixed items-center justify-center z [9999] bottom-4 right-4 h-14 w-14" id="to-top">
+        <span class="#home"><img src="https://img.icons8.com/fluency/48/000000/gps-device.png"
+                class="hover:animate-bounce" /></span>
+    </a>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false,
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+
+    <script src="dist/js/script.js"></script>
+
+
+
+
+
+
+    <!-- about section end -->
+    <!-- portfolio -->
+    <!-- <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-clip mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Newst project</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum, dolor sit amet consectetur
+                        adipisicing
+                        elit. Possimus odit quis eius alias quod,
+                        officia dolorum a id adipisci repellat.</p>
+                </div>
+            </div>
+            <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/img/portfolio/bs.jpg" alt="bootstrap" width="w-full">
+                    </div>
+                    <h3 class="font-semibold text-xl m5 mb-3 text-dark">landing page zidane</h3>
+                    <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Tempora enim saepe temporibus!
+                    </p>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/img/portfolio/vue.png" alt="bootstrap" width="w-full">
+                    </div>
+                    <h3 class="font-semibold text-xl m5 mb-3 text-dark">landing page zidane</h3>
+                    <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Tempora enim saepe temporibus!
+                    </p>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/img/portfolio/laravel.png" alt="bootstrap" width="w-full">
+                    </div>
+                    <h3 class="font-semibold text-xl m5 mb-3 text-dark">landing page zidane</h3>
+                    <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Tempora enim saepe temporibus!
+                    </p>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/img/portfolio/reactjs.jpg" alt="bootstrap" width="w-full">
+                    </div>
+                    <h3 class="font-semibold text-xl m5 mb-3 text-dark">landing page zidane</h3>
+                    <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Tempora enim saepe temporibus!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- close portfolio -->
+
+</body>
+
+</html>
